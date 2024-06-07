@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/SearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:hint="find the words"
+            android:padding="12dp" >
+
+
+        </EditText>
+
+        <Button
+            android:id="@+id/SearchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#316859"
+            android:text="Search"
+            android:layout_marginRight="05dp"/>
+
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/searchHistoryRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last searched words will appear here"
+        android:layout_marginTop="16dp"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/searchHistoryRecyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/SearchBar"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+
+    <TextView
+        android:id="@+id/SampleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="word"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        android:textColor="@color/light_purple"
+        android:textSize="23sp"
+        />
+
+    <TextView
+        android:id="@+id/PhoneticView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/t e s t/"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+
+</LinearLayout>
